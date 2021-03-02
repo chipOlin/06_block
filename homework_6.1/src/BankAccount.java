@@ -6,7 +6,9 @@ public class BankAccount {
   }
 
   public void put(double amountToPut) {
-    if(amountToPut > 0) amount += amountToPut;
+    if(amountToPut > 0) {
+      amount += amountToPut;
+    }
   }
 
   public void take(double amountToTake) {
