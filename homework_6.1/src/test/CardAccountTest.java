@@ -14,7 +14,7 @@ public class CardAccountTest {
 
     @BeforeEach
     public void setUp() {
-        cardAccount = new CardAccount();
+        cardAccount = new CardAccount(1000);
     }
 
     @Test

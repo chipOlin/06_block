@@ -1,6 +1,10 @@
 public class BankAccount {
     private double amount;
 
+    BankAccount(double sumOnAcc) {
+        amount = sumOnAcc;
+    }
+
     public double getAmount() {
         return amount;
     }

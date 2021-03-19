@@ -20,7 +20,7 @@ public class DepositAccountTest {
 
     @BeforeEach
     public void setUp() {
-        depositAccount = new DepositAccount();
+        depositAccount = new DepositAccount(1000);
     }
 
     @Test
