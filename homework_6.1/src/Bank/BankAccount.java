@@ -1,7 +1,9 @@
+package Bank;
+
 public class BankAccount {
     private double amount;
 
-    BankAccount(double sumOnAcc) {
+    public BankAccount(double sumOnAcc) {
         amount = sumOnAcc;
     }
 

@@ -1,3 +1,7 @@
+import Bank.BankAccount;
+import Bank.CardAccount;
+import Bank.DepositAccount;
+
 import java.time.LocalDate;
 
 public class Main {
@@ -12,7 +16,7 @@ public class Main {
         System.out.println("----------------------");
 
         CardAccount account2 = new CardAccount(1000);
-        //BankAccount account2 = new CardAccount(1000);
+        //Bank.BankAccount account2 = new Bank.CardAccount(1000);
         //account2.put(1000);
         System.out.println(account2.getAmount());
         account2.take(100);
@@ -27,7 +31,7 @@ public class Main {
         System.out.println("----------------------");
 
         DepositAccount account3 = new DepositAccount(1500);
-        //BankAccount account3 = new DepositAccount(1500);
+        //Bank.BankAccount account3 = new Bank.DepositAccount(1500);
         //account3.put(1500);
         System.out.println(account3.getAmount());
         System.out.println(account3.getLastIncome());

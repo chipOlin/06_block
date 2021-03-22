@@ -1,7 +1,9 @@
-public class CardAccount extends BankAccount {
-    public static final double PERCENT = 0.01;
+package Bank;
 
-    CardAccount(double sumOnAcc) {
+public class CardAccount extends BankAccount {
+    private static final double PERCENT = 0.01;
+
+    public CardAccount(double sumOnAcc) {
         super(sumOnAcc);
     }
 
