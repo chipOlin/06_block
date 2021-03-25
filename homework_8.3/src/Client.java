@@ -1,16 +1,22 @@
 public abstract class Client {
+    private double amount;
+    protected String info = "";
+
+    void AccountInfo() {
+        System.out.println("Информация о счёте:");
+        System.out.println("\t" + info);
+        System.out.println("Баланс: " + amount + " рублей.");
+    }
 
     public double getAmount() {
-        //TODO: реализуйте метод и удалите todo
-        return 0;
+        return amount;
     }
 
     public void put(double amountToPut) {
-        //TODO: реализуйте метод и удалите todo
+        amount += amountToPut;
     }
 
     public void take(double amountToTake) {
-        //TODO: реализуйте метод и удалите todo
+        amount -= amountToTake;
     }
-
 }
