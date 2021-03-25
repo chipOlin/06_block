@@ -1,5 +1,3 @@
-package Bank;
-
 public class CardAccount extends BankAccount {
     private static final double PERCENT = 0.01;
 

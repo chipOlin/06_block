@@ -1,7 +1,3 @@
-import Bank.BankAccount;
-import Bank.CardAccount;
-import Bank.DepositAccount;
-
 import java.time.LocalDate;
 
 public class Main {

@@ -1,6 +1,7 @@
 public abstract class Client {
     private double amount;
     protected String info = "";
+    protected final static double PERCENT = 0.1;
 
     void AccountInfo() {
         System.out.println("Информация о счёте:");
