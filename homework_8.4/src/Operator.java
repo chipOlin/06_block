@@ -10,6 +10,6 @@ public class Operator extends Company implements Employee {
 
     @Override
     public double getMonthSalary() {
-        return 0;
+        return salary;
     }
 }
