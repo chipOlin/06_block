@@ -6,7 +6,7 @@ public class TopManager extends Company implements Employee {
         this.company = company;
         salary = (int)(Math.random() * 10000) + 60000;
         if (company.getIncome() > 10000000) salary += salary * 1.5;
-        System.out.println("t - " + salary);
+        //System.out.println("t - " + salary);
     }
 
     @Override

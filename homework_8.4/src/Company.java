@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Company {
     private double income;
-    List<Employee> staff = new ArrayList<>();
+    public List<Employee> staff = new ArrayList<>();
 
     public double getIncome() {
         return income;
@@ -28,31 +26,27 @@ public class Company {
         }
     }
 
-    public void fire() {
-
+    public void fire(int percent) {
+        int num = (int) (staff.size() * ((double) percent)/100);
+        for (int i = 0; i <= num; i++) {
+            staff.remove((int) (Math.random() * staff.size()));
+        }
     }
 
     public List<Employee> getTopSalaryStaff(int count) {
-        /*TreeSet<Employee> salaries = new TreeSet<>(new TopSalary());
-        for (Employee e : staff) {
-            salaries.add(e);
-        }*/
-        /*
-        for (int index = 0; index < staff.size(); index++) {
-            //System.out.println(staff.get(index).getClass());
-            if (staff.get(index) instanceof Operator) {
-                System.out.println(((Operator) staff.get(index)).getMonthSalary());
-            } else if (staff.get(index) instanceof Manager) {
-                System.out.println(((Manager) staff.get(index)).getMonthSalary());
-            } else {
-                System.out.println(((TopManager) staff.get(index)).getMonthSalary());
-            }
-        }*/
-        return null;
+        List<Employee> sortStaff = new ArrayList<>(staff);
+        List<Employee> salaries = new ArrayList<>();
+        sortStaff.sort(new TopSalary());
+        for (int i = 0; i < count; i++) salaries.add(sortStaff.get(i));
+        return salaries;
     }
 
     public List<Employee> getLowestSalaryStaff(int count) {
-        return null;
+        List<Employee> sortStaff = new ArrayList<>(staff);
+        List<Employee> salaries = new ArrayList<>();
+        sortStaff.sort(new LowSalary());
+        for (int i = 0; i < count; i++) salaries.add(sortStaff.get(i));
+        return salaries;
     }
 }
 
@@ -60,7 +54,7 @@ class TopSalary implements Comparator<Employee> {
 
     @Override
     public int compare(Employee o1, Employee o2) {
-        return Double.compare(o1.getMonthSalary(), o2.getMonthSalary());
+        return Double.compare(o2.getMonthSalary(), o1.getMonthSalary());
     }
 }
 
@@ -68,6 +62,6 @@ class LowSalary implements Comparator<Employee> {
 
     @Override
     public int compare(Employee o1, Employee o2) {
-        return Double.compare(o2.getMonthSalary(), o1.getMonthSalary());
+        return Double.compare(o1.getMonthSalary(), o2.getMonthSalary());
     }
 }
