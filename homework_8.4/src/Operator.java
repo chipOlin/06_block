@@ -1,9 +1,9 @@
-public class Operator extends Company implements Employee {
-    Company company;
+public class Operator implements Employee {
+    //Company company;
     double salary;
 
-    Operator(Company company) {
-        this.company = company;
+    Operator() {
+        //this.company = company;
         salary = (int)(Math.random() * 10000) + 30000;
         //System.out.println("o - " + salary);
     }

@@ -1,4 +1,4 @@
-public class Manager extends Company implements Employee {
+public class Manager implements Employee {
     Company company;
     double salary;
 

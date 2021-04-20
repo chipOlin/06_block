@@ -1,4 +1,4 @@
-public class TopManager extends Company implements Employee {
+public class TopManager implements Employee {
     Company company;
     double salary;
 
